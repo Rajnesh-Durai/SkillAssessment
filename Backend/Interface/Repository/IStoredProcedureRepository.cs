@@ -1,4 +1,5 @@
-﻿using SkillAssessment.Model.ViewModel;
+﻿using SkillAssessment.Model.View_Model;
+using SkillAssessment.Model.ViewModel;
 
 namespace SkillAssessment.Interface.Repository
 {
@@ -10,5 +11,6 @@ namespace SkillAssessment.Interface.Repository
         Task<RequestUserDTO> GetRequestUser(int RequestId);
         Task<AccessoriesDTO> GetEditSideBar(int id);
         Task<AccessoriesDTO> GetEditSideBarForRequest(int id);
+        Task<List<AllottedTestDTO>> GetAllottedTest(string UserId);
     }
 }

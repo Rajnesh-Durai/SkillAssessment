@@ -33,6 +33,7 @@ using SkillAssessment.Repository.UserRepository;
 using SkillAssessment.Repository.UserRequestRepository;
 using SkillAssessment.Repository.ViewEmployeeProfilesRepository;
 using SkillAssessment.Service.AddQuestionService;
+using SkillAssessment.Service.AllottedAssessmentService;
 using SkillAssessment.Service.DepartmentService;
 using SkillAssessment.Service.EmployeeManagementService;
 using SkillAssessment.Service.EmployeesTestResultServices;
@@ -64,6 +65,7 @@ builder.Services.AddScoped<IEmployeeManagementService, EmployeeManagementService
 builder.Services.AddScoped<IEmployeeManagementRepository, EmployeeManagementRepository>();
 builder.Services.AddScoped<IAssessmentHistoryRepository, AssessmentHistoryRepository>();
 builder.Services.AddScoped<IUserAssessmentRepository, UserAssessmentRepository>();
+builder.Services.AddScoped<IAllottedAssessmentService, AllottedAssessmentService>();
 builder.Services.AddScoped<IQuestionTypeRepository, QuestionTypeRepository>();
 builder.Services.AddScoped<IHistoryTableService, HistoryTableService>();
 builder.Services.AddScoped<IStoredProcedureRepository, StoredProcedureRepository>();

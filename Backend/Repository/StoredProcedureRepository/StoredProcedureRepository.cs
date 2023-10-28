@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using SkillAssessment.Data;
 using SkillAssessment.GlobalException;
 using SkillAssessment.Interface.Repository;
+using SkillAssessment.Model.View_Model;
 using SkillAssessment.Model.ViewModel;
 using System.Diagnostics.CodeAnalysis;
 
@@ -128,6 +129,23 @@ namespace SkillAssessment.Repository.StoredProcedureRepository
                 return items.FirstOrDefault() ?? throw new Exception(CustomException.ExceptionMessages["CantEmpty"]);
             }
             catch (Exception ex) { Console.WriteLine(ex.Message); return new AccessoriesDTO(); }
+        }
+        #endregion
+        #region Get All Allocatted Assessment
+        /// <summary>
+        /// Retrieves all the allocated assessment for an employee
+        /// </summary>
+        /// <returns>list of request.</returns>
+        public async Task<List<AllottedTestDTO>> GetAllottedTest(string id)
+        {
+            try
+            {
+                var userIdParam = new SqlParameter("@userid", id);
+                var items = await _context.Set<AllottedTestDTO>()
+                    .FromSqlRaw("EXEC USP_AllocatedAssessment @userid", userIdParam).ToListAsync();
+                return items ?? throw new Exception(CustomException.ExceptionMessages["CantEmpty"]);
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); return new List<AllottedTestDTO>(); }
         }
         #endregion
     }

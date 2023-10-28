@@ -90,6 +90,10 @@ const LoginPage = () => {
           window.location.href = '/Dashboard';
           toast.success("Success");
         }
+        if (data.role === "Employee") {
+          window.location.href = '/AllottedAssessment';
+          toast.success("Success");
+        }
       })
       .catch(error => {
         toast.error('Invalid Credentials')

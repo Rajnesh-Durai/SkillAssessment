@@ -31,6 +31,9 @@ body{
     font-weight: 600;
     line-height: 18px;
 }
+#custom-margin {
+    margin-top: 50px;
+}
 #letter{
     color: #555656;
     font-weight: 500;

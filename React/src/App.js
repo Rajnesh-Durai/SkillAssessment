@@ -14,6 +14,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LoginPage from './Components/LogIn/LoginPage';
 import Error from './Components/Error/Error';
 import Portal from './Components/Portal/Portal';
+import UserTestList from './Components/UserTestList/UserTestList';
 
 function App() {
   const userRole = sessionStorage.getItem('role');
@@ -33,6 +34,7 @@ function App() {
           <Route path="/ManageEmployee/:empid" element={userRole === 'Admin' ? <EmployeeManagement /> : <Error />}></Route>
           <Route path='/QuestionBank/*' element={userRole === 'Admin' ? <Question /> : <Error />} />
           <Route path='QuestionBank/:topic/:levelValue' element={userRole === 'Admin' ? <AvailableQuestions /> : <Error />} />
+          <Route path='/AllottedAssessment' element={userRole === 'Employee' ? <UserTestList /> : <Error />} />
           <Route path="*" element={<Error />} />
           <Route path="/ExamPortal" element={<Portal />} />
         </Routes>

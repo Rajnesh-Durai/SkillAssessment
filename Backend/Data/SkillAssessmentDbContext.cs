@@ -31,6 +31,7 @@ namespace SkillAssessment.Data
             modelBuilder.Entity<AccessoriesDTO>().HasNoKey();
             modelBuilder.Entity<EmployeesTestHistoryDTO>().HasNoKey();
             modelBuilder.Entity<EmployeeProfileDetailsViewDTO>().HasNoKey();
+            modelBuilder.Entity<AllottedTestDTO>().HasNoKey();
             base.OnModelCreating(modelBuilder);
         }
     }
