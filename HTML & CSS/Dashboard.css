@@ -1,0 +1,959 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.sidebar{
+    position: fixed;
+    background-image: linear-gradient(to bottom,#AFE0F4,#E1EEC8);
+    width: fit-content;
+    height: 100%;
+    overflow-y: auto;
+    padding: 40px 25px 0 45px;
+    width: 300px;
+    z-index: 2;
+}
+.notification-dot {
+    height: 6px;
+    width: 6px;
+    background-color: red;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: inline-block;
+    position: relative;
+    top: -7px;
+    left: -30px;
+  }
+
+  .pull-left {
+    float: left;
+  }
+.logo{
+    display: flex;
+    padding: 0 4px;
+}
+.logo img{
+    width: 48px;
+    height: 50px;
+    margin:5px 18px;
+}
+#ass{
+    font-size: 15px;
+}
+.imgside{
+    margin-top:80px;
+    position: absolute;
+    left: 30px;
+    top: 650px;
+}
+
+.sidebar h3{
+    line-height: 14px;
+    margin: 20px 0;
+}
+.sidebar p{
+    font-size: 15px;
+    color: rgb(68, 68, 68);
+    line-height: 14px;
+    width: 220px;
+    padding: 20px 20px;
+}
+.sidebar span{
+    color: rgb(68, 68, 68);
+    font-size: 13px;
+}
+i{
+    color: rgb(68, 68, 68);
+}
+.ques{
+    margin-left: 35px;
+    border-left: 1px solid rgb(163, 163, 163);
+}
+.ques p{
+    width: 150px;
+    padding: 10px 15px;
+    margin-left: 5px;
+}
+.emp{
+    margin-left: 30px;
+    border-left: 1px solid rgb(163, 163, 163);
+}
+.emp p{
+    width: 155px;
+    padding: 10px 15px;
+    margin-left: 5px;
+}
+.sidebar p{
+    /* background-color: #ffffff00; */
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.res{
+    margin-left: 20px;
+}
+.hidden{
+    display: none;
+}
+.navbar{
+    background-image: linear-gradient(to right,#F8FDFF, #F6FAEF);
+    display: flex;
+    justify-content: space-between;
+    margin-left: 300px;
+    padding: 25px 30px;
+}
+.navbar h3{
+    line-height: 14px;
+}
+.navbar span{
+    font-size: 13px;
+    color: rgb(68, 68, 68);
+}
+.inline{
+    display: flex;
+    margin-top: 20px;
+}
+.inline i{
+    margin: 0 20px;
+}
+
+.search{
+    border: 1px solid;
+    border-radius: 5px;
+    width: 280px;
+}
+
+.searchDiv{
+    display: flex;
+    background-color: #FFFFFF;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 35px;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid grey;
+}
+.menu{
+    display: none;
+}
+.btn-1{
+    background-color: transparent;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.hide-icon-1{
+    display: none;
+    margin-left: 20px;
+}
+.search{
+    
+    background: url(./img/search.png) no-repeat left ;
+    background-size: 20px;
+
+ }
+
+/* overlay*/
+ .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+#close{
+    color: #000000;
+}
+  .overlay-content {
+    position: relative;
+   
+  }
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  /* Form */
+ .formheader{
+    font-size: 30px;
+    line-height: 33px;
+    margin-top: 50px;
+    margin-left: 40px;
+   
+ } 
+ #email{
+    width: 654px;
+    height: 56px;
+    margin-top: 50px;
+    margin-left: 40px;
+ }
+ .forminput{
+    background: none;
+    border: 1px solid lightgray;
+    padding: 0 0 0 15px;
+ }
+.forminput:focus{
+    border: 1px solid lightgray;
+}
+ .forminput:focus ~ .inputlabel::before{
+    top: -85px;
+    z-index: 1;
+ }
+ .inputlabel{
+    position: relative;
+    width: 250px;
+ }
+ .inputlabel::before{
+    content: "Enter jobseeker email id";
+    position: absolute;
+    top: -60px;
+    left: 55px;
+    z-index: -1;
+    color: #717D8A;
+    background-color: white;
+    box-sizing: border-box;
+    transition: 0.1s ease;
+ }
+ .formheader1{
+    font-size: 30px;
+    line-height: 33px;
+    margin-top: 20px;
+    margin-left: 40px;
+    color: #717D8A;
+   
+ } 
+ #text{
+    width: 654px;
+    height: 56px;
+    margin-top: 30px;
+    margin-left: 40px;
+ }
+ .forminput1{
+    background: none;
+    border: 1px solid lightgray;
+    padding: 0 0 0 15px;
+ }
+.forminput1:focus{
+    border: 1px solid lightgray;
+}
+ .forminput1:focus ~ .inputlabel1::before{
+    top: -85px;
+    z-index: 1;
+ }
+ .inputlabel1{
+    position: relative;
+    width: 250px;
+ }
+ .inputlabel1::before{
+    content: "Add Asssesment Id";
+    position: absolute;
+    top: -60px;
+    left: 55px;
+    z-index: -1;
+    color: #717D8A;
+    background-color: white;
+    box-sizing: border-box;
+    transition: 0.1s ease;
+ }
+ #input_p{
+    color: #717D8A;
+    margin-top: -20px;
+    margin-left: 55px;
+
+ }
+
+
+
+ .formlogo{
+    margin-left: 400px;
+    margin-top: 480px;
+    position:fixed;
+ }
+
+.main{
+    display: flex;
+    margin-top: 50px;
+}
+.banner1{
+        /* BG */
+    /* position: absolute; */
+    width: 725px;
+    height: 229px;
+    /* left: 346px;
+    top: 170px; */
+
+    background: linear-gradient(270deg, #E1EEC8 -9.65%, rgba(243, 249, 233, 0) 76.44%,rgba(255, 255, 255, 0.637));
+    /* TEXT_COLOR/TEXT-300 */
+
+    border: 1px solid #D6DADE;
+    border-radius: 10px;
+}
+.img1{
+    /* position: absolute; */
+    width: 480px;
+    height: 240px;
+    border-radius: 10px;
+    background: url(./img/Mask\ group.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    margin-right: 370px;
+    margin-bottom: 32px;
+    
+    
+}
+.p1{
+    
+    /* font-family: 'Manrope'; */
+    /* font-style: normal; */
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 38px;
+    text-align: right;
+    letter-spacing: 0.02em;
+    color: #151515;
+    padding-right: 33px;
+    margin-bottom: 0%;
+    padding-top: 20px;
+
+}
+.p2{
+    /* font-family: 'Manrope'; */
+    /* font-style: normal; */
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: right;
+    color: rgba(87, 87, 87, 0.82);
+    padding-right: 33px;
+    padding-top: 2px;
+    margin-top: 0%;
+
+}
+#btn1{
+    box-sizing: border-box;
+
+    /* position: absolute; */
+    width: 198px;
+    height: 42px;
+    margin-left: 500px;
+    margin-top: 20px;
+
+    /* PRIMARY_01/PRI-1-100 */
+
+    background: #E1EEC8;
+    /* PRIMARY_01/PRI-1-300 */
+
+    border: 1px solid #BAD881;
+    border-radius: 4px;
+}
+.banner2{
+    /* position: absolute; */
+    width: 725px;
+    height: 229px;
+    left: 1149px;
+    top: 170px;
+
+    background: linear-gradient(87.4deg, rgba(223, 243, 251, 0.1) 29.02%, #DFF3FB 101.47%);
+    /* TEXT_COLOR/TEXT-300 */
+
+    border: 1px solid #D6DADE;
+    border-radius: 10px;
+}
+.img2{
+    /* position: absolute; */
+    width: 480px;
+    height: 240px;
+    border-radius: 10px;
+    background: url(./img/1660636803350.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    
+}
+#btn2{
+    
+    box-sizing: border-box;
+
+    /* position: absolute; */
+    width: 198px;
+    height: 42px;
+    margin-left: 500px;
+    margin-top: 20px;
+
+    /* PRIMARY_BLUE/PRI-2-100 */
+
+    background: #AFE0F4;
+    /* PRIMARY_BLUE/PRI-2-200 */
+
+    border: 1px solid #7BCCED;
+    border-radius: 4px;
+}
+#explore{
+    /* EXPLORE */
+
+
+/* position: absolute; */
+width: 103px;
+height: 33px;
+
+/* font-family: 'Manrope'; */
+/* font-style: normal; */
+font-weight: 600;
+font-size: 24px;
+line-height: 33px;
+/* identical to box height */
+
+letter-spacing: -0.01em;
+
+color: #000000;
+margin-bottom: 38px;
+margin-top: 38px;
+}
+.row1{
+    display: flex;
+}
+.col2{
+    margin-left: 125px;
+    margin-right: 125px;
+}
+.con{
+    margin-left: 140px;
+    position: absolute;
+    
+}
+
+a img{
+    margin-left: 320px;
+    margin-top: 30px;
+    
+    
+} 
+.rect1{
+    /* Rectangle 11862 */
+
+
+/* position: absolute; */
+width: 435px;
+height: 154px;
+padding-top: 20px;
+margin-bottom: 50px;
+
+
+/* LAYOUT_COLOR/LAYOUT-01 */
+
+background: #FFFFFF;
+box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
+border-radius: 8px;
+}
+.ell1{
+    /* Ellipse 225 */
+
+
+    box-sizing: border-box;
+    position: absolute;
+    width: 98px;
+    height: 98px;
+    margin-left: 26px;
+    /* PRIMARY_01/PRI-1-50 */
+    background-image: url(./img/Ellipse\ 225.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* PRIMARY_01/PRI-1-50 */
+    border: 0px solid #F3F9E9;
+    display: flex;
+}
+.icon1 img{
+    /* Vector */
+    /* position: absolute; */
+   
+    margin-top: 29px;
+    margin-left: 26px;
+}
+#spa{
+    color: rgba(87, 87, 87, 0.82);
+}
+#phead{
+    /* font-family: 'Manrope'; */
+    /* font-style: normal; */
+    font-weight: 500;
+    font-size: 22px;
+    margin-bottom: 0rem;
+    margin-top: 15px;
+}
+#ptime{
+    /* font-family: 'Manrope'; */
+    /* font-style: normal; */
+    font-weight: 400;
+    font-size: 16px;
+    color: #A8B0B9;
+}
+
+
+@media screen and (max-width: 1600px) {
+    .hide-icon{
+        display: none;
+     }
+     .hide-icon-1{
+        display: block;
+    }
+    .main{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 37%;
+    }
+    .p1{
+        font-size: 30px;
+        line-height: 1.5;
+    }
+    .p2{
+        font-size: 10px;
+        margin: 0%;
+    }
+    .img1{
+        width: 100%;
+        height: 240px;
+        border-radius: 10px;
+        background: url(./img/Mask\ group.png);
+        background-repeat: no-repeat;
+        background-size: 375px 200px;
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
+    #btn1{
+        margin-left: 80%;
+        margin-bottom: 20px;
+        width: 100px;
+        height: 40px;
+        font-size: 9px;
+        font-weight:400;
+    }
+    .banner1{
+    width: 100%;
+    height: 200px;
+    }
+    .bannerTxt{
+        font-size: 8px;
+    }
+    
+    .img2{
+        width: 100%;
+        height: 240px;
+        border-radius: 10px;
+        background-size: 300px 200px;
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
+    #btn2{
+        margin-left: 80%;
+        margin-bottom: 20px;
+        width: 100px;
+        height: 40px;
+        font-size: 9px;
+        font-weight:400;
+    }
+    .banner2{
+    width: 100%;
+    height: 200px;
+    }
+    .row1{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 600px;
+        margin-left: 35%;
+    }
+    .rect1{
+        width: 580px;
+    }
+    .con{
+        position: relative;
+    }
+    .con p{
+        width: 410px;
+    }
+    .col2{
+        margin: 0%;
+    }
+    a img{
+        margin-left: 460px;
+        width: 60px;
+        height: 60px;
+    }
+    
+}  
+
+
+@media screen and (max-width: 980px){
+ .hide-icon{
+    display: none;
+    position: fixed;
+ }
+ .hide-icon-1{
+    display: block;
+    position: fixed;
+}
+ .main{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.p1{
+    font-size: 30px;
+    line-height: 1.5;
+}
+.p2{
+    font-size: 10px;
+    margin: 0%;
+}
+.img1{
+    width: 100%;
+    height: 240px;
+    border-radius: 10px;
+    background: url(./img/Mask\ group.png);
+    background-repeat: no-repeat;
+    background-size: 220px 200px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-left: 80px;
+}
+#btn1{
+    margin-left: 68%;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 40px;
+    font-size: 9px;
+    font-weight:400;
+}
+.banner1{
+width: 420px;
+height: 200px;
+}
+.bannerTxt{
+    font-size: 8px;
+}
+
+.img2{
+    width: 100%;
+    height: 240px;
+    border-radius: 10px;
+    background-size: 220px 200px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-left: 80px;
+}
+#btn2{
+    margin-left: 68%;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 40px;
+    font-size: 9px;
+    font-weight:400;
+}
+.banner2{
+width: 420px;
+height: 200px;
+}
+#explore{
+    margin-left: 300px;
+}
+.row1{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 600px;
+}
+.rect1{
+    width: 380px;
+    margin-left: 50px;
+}
+#ptime, #phead{
+    font-size: 16px;
+}
+.con{
+    position: relative;
+}
+.con p{
+    width: 410px;
+}
+.col2{
+    margin: 0%;
+}
+a img{
+    margin-left: 260px;
+    width: 60px;
+    height: 60px;
+}
+}
+
+
+@media screen and (max-width: 760px){
+ .hide-icon{
+    display: none;
+ }
+ .hidden-2{
+    display: none;
+ }   
+ .navbar{
+    margin-left: 0;
+ }
+ .navbar h3{
+    text-align: center;
+    width: 250px;
+ }
+ .menu{
+    display: block;
+ }
+ .search{
+    display: none;
+ }
+ .main{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.p1{
+    font-size: 20px;
+    line-height: 1.5;
+}
+.p2{
+    font-size: 10px;
+    margin: 0%;
+}
+.img1{
+    width: 100%;
+    height: 240px;
+    border-radius: 10px;
+    background: url(./img/Mask\ group.png);
+    background-repeat: no-repeat;
+    background-size: 275px 200px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-right: 340px;
+}
+#btn1{
+    margin-left: 65%;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 40px;
+    font-size: 9px;
+    font-weight:400;
+}
+.banner1{
+width: 480px;
+height: 200px;
+}
+.bannerTxt{
+    font-size: 8px;
+}
+
+.img2{
+    width: 100%;
+    height: 240px;
+    border-radius: 10px;
+    background-size: 240px 200px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    margin-right: 340px;
+}
+#btn2{
+    margin-left: 65%;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 40px;
+    font-size: 9px;
+    font-weight:400;
+}
+.banner2{
+width: 480px;
+height: 200px;
+}
+#explore{
+    margin-left: 30px;
+}
+.row1{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 600px;
+    margin-left: 20px;
+}
+.rect1{
+    width: 380px;
+}
+.con{
+    position: relative;
+}
+.con p{
+    width: 210px;
+}
+.col2{
+    margin: 0%;
+}
+a img{
+    margin-left: 270px;
+    width: 30px;
+    height: 30px;
+}
+
+ 
+ 
+}
+@media screen and (max-width: 420px) {
+    body{
+        font-size: 15px;
+    }
+    h3{
+        font-size: 16px;
+    }
+    .sidebar span{
+        font-size: 9px;
+    }
+    .sidebar h3{
+        line-height: 10px;
+    }
+    .navbar span{
+        font-size: 9px;
+    }
+    .navbar h3{
+        line-height: 10px;
+    }
+    .btn-1{
+        margin-top: 20px;
+    }
+    .logo img{
+        width: 35px;
+        height: 35px;
+        margin-top: 10px;
+    }
+    .main{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .p1{
+        font-size: 15px;
+        line-height: 1.5;
+      
+    }
+    .p2{
+        font-size: 8px;
+    
+    }
+    .img1{
+        width: 100%;
+        height: 240px;
+        border-radius: 10px;
+        background: url(./img/Mask\ group.png);
+        background-repeat: no-repeat;
+        background-size: 275px 180px;
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        margin-right: 300px;
+    }
+    #btn1{
+        margin-left: 68%;
+        margin-bottom: 20px;
+        width: 100px;
+        height: 40px;
+        font-size: 9px;
+        font-weight:400;
+    }
+    .banner1{
+    width: 360px;
+    height: 180px;
+    }
+    .bannerTxt{
+        font-size: 8px;
+    }
+
+    .img2{
+        width: 100%;
+        height: 240px;
+        border-radius: 10px;
+        background-size: 200px 180px;
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        margin-right: 300px;
+    }
+    #btn2{
+        margin-left: 68%;
+        margin-bottom: 20px;
+        width: 100px;
+        height: 40px;
+        font-size: 9px;
+        font-weight:400;
+    }
+    .banner2{
+    width: 360px;
+    height: 180px;
+    }
+    #explore{
+        margin-left: 2%;
+    }
+    .row1{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 600px;
+        margin-left: 0%;
+        
+    }
+    .rect1{
+        width: 300px;
+        height: 140px;
+        margin-left: 2%;
+    }
+    .ell1{
+        margin-left: 12px;
+        background-image: url(./img/Ellipse\ 225.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 68px;
+        height: 68px;
+        margin-top: 17px;
+    }
+    .icon1 img{
+        height: 28px;
+        width: 28px;
+        margin-left: 20px;
+        margin-top: 19px;
+
+
+    }
+    #ptime,#phead{
+        font-size: 12px;
+        
+    }
+    .con{
+        position: relative;
+        margin-left: 110px;
+    }
+    .con p{
+        width: 210px;
+    }
+    .col2{
+        margin: 0%;
+    }
+    a img{
+        margin-left: 215px;
+        width: 45px;
+        height:45px;
+    }
+
+    
+}
+

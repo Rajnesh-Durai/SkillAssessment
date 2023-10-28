@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="scripts.js"></script>
+
+</head>
+
+<body >
+    <div class="main-con">
+        <div class="sidebar hidden-2" id="nav-links">
+            <div class="logo">
+                <img src="./images/kaninilogo.png" alt="" class="logo" width="43px" height="35px" />
+                <h3>Kanini<br><span>Assessment</span></h3>
+                <div class="menu">
+                    &emsp;&emsp;&emsp;&emsp;<button class="close btn-1 hidden" id="close"><i class="fa fa-times"
+                            aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <p><i class="fa-solid fa-table"></i>&emsp;Dashboard</p>
+            <p id="question"><i class="fa-solid fa-pager"></i>&emsp;Questions&emsp;&emsp;&emsp;&emsp;<i
+                    class="fa-solid fa-chevron-down" id="down" onclick="extramodule()"></i><i
+                    class="fa-solid fa-chevron-up hidden" id="up" onclick="closeModule()"></i></p>
+            <div class="ques hidden" id="ques">
+                <p>Add Questions</p>
+                <p>Question bank</p>
+            </div>
+            <p><i class="fa-solid fa-suitcase"></i>&emsp;Jobseeker</p>
+            <p><i class="fa-solid fa-user"></i>&emsp;Employee&emsp;&emsp;&emsp;&emsp;<i class="fa-solid fa-chevron-down"
+                    id="emp-down" onclick="empmodule()"></i><i class="fa-solid fa-chevron-up hidden" id="emp-up"
+                    onclick="empClose()"></i></p>
+            <div class="emp hidden" id="emp">
+                <p>Assessment Data</p>
+                <p>Manage Employee</p>
+            </div>
+            <p><i class="fa-solid fa-gears"></i>&emsp;Settings</p>
+            <div class="hide-icon-1">
+                <i class="fa-solid fa-bell">&emsp;</i>&emsp;<span><b>HR Admin</b></span>
+            </div>
+        </div>
+        <div>
+            <div class="navbar">
+                <div class="menu">
+                    <button class="open btn-1" id="open" ><b>☰</b></button>   
+                </div> 
+                <div class="heading">
+                    <h3>Employee Management</h3>
+                
+                <div class="heading-below">
+                    <p>Add question under the selected department and topics</p>
+                </div>
+            </div>
+                <div class="inline">
+                    <form>
+                        <input type="search" placeholder="search here" name="search" class="search" width="345px"/>
+                    </form>
+                <div class="hide-icon" id="hr">
+                    
+                    <i class="fa-solid fa-bell"></i><span><img src="./images/navbarkanini.png" alt="" width="35px" height="35px"><b>HR Admin</b></span>
+                </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Navbar -->
+<!-- 
+    <div class="navbar">
+
+        <div>
+            <div class="heading">
+                Employee Management
+            </div>
+
+            <div class="heading-below">
+                Add question under the selected department and topics
+            </div>
+
+        </div>
+        <div class="search-navbar">
+            <div class="searching">
+
+                <input type="search" class="search-box" placeholder="search">
+                <img src="./images/search.png" class="search-image">
+            </div>
+
+            <div class="logo-admin">
+                <div class="kaninihrlogo">
+                    <img src="./images/kaninilogo.png" width="30px" height="30px">
+
+                </div>
+                <div>
+                    <p>HR Admin</p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <div class="complete-flex">
+
+    <div class="total-flex">
+        <div class="profile-box">
+            <div class="profile">
+                <img src="./images/img.png" alt="profile image" class="profile-image">
+            </div>
+            <div class="profile-heading">
+                <p>2080-Kalaimathi Kathiravan</p>
+            </div>
+            <div class="profile-heading-below">
+                <p>Junior Associate - IT Application Development</p>
+            </div>
+            <div class="skill">
+                <p>Skill Level: Begineer</p>
+            </div>
+            <div class="border">
+                <div class="inside-border">
+
+                </div>
+            </div>
+            <div class="inside-box">
+                <div class="inside-box-content1">
+                    Earned Points
+                    <div class="inside-box-contentans1">
+                        1257
+                    </div>
+                </div>
+                <div class="side-border1">
+
+                </div>
+                <div class="inside-box-content2">
+                    Badges
+                    <div class="inside-box-contentans2">
+                        3
+                    </div>
+                </div>
+                <div class="side-border2">
+
+                </div>
+                <div class="inside-box-content3">
+                    Test Taken
+                    <div class="inside-box-contentans3">
+                        15
+                    </div>
+                </div>
+            </div>
+            <div class="profile-contact">
+                <div class="contact-details">
+                   <p>Contact Details</p>
+                </div>
+                <div class="location">
+                    <img src="./images/location.png" width="13.03px" height="18px" alt="">
+                    Coimbatore
+                </div>
+                <div class="phonenumber">
+                    <img src="./images/phonenumber.png" width="11.57px" height="18px" alt="">
+                   +91 9626404720
+                </div>
+                <div class="email">
+                    <img src="./images/email.png" width="14.67px" height="12px" alt="">
+                    kalaimathi55@gmail.com
+                </div>
+            </div>
+            <div class="badge">
+                <p>Badges</p>
+            </div>
+            <div class="badges">
+
+                <div class="badges-list1">
+                    <img src="./images/reward 1.png" width="50px" height="50px" alt="">
+                </div>
+                <div class="badges-list2">
+                    <img src="./images/reward 2.png" width="50px" height="50px" alt="">
+                </div>
+                <div class="badges-list3">
+                    <img src="./images/reward 3.png" width="50px" height="50px" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="right-top-flex">
+            <div class="right-flex1">
+                <div class="right-box">
+                    <div class="complete-course">
+                        <p onclick="complete_course()">Completed Course</p>
+                        <div class="right-border">
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="ongoing-right">
+                    <div class="ongoing-course">
+                       <p onclick=ongoing_course()>Ongoing Course</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-flex2">
+                <div class="assignment-buttons">
+                    <button type="submit" class="assignment-button">+ Assign Assessment</button>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    <div class="total-flex2" id="total-flex">
+        <div class="complete-user1">
+
+            <div class="user1">
+                <div class="users-flex1">
+                    <div class="user-skill1">
+                        <p>User Experience Skill Assessment </p>
+
+                        <div class="user-topics1">
+                            <p><span><b>Topics :</b></span> Information Architecture, Information Design , Interaction
+                                Design , Mobile UX Design, Patterns & Antipatterns , Portfolio Design.</p>
+                        </div>
+                    </div>
+                    <div class="result">
+                        <button type="submit" onclick="view_result()" class="result1">View Result</button>
+                    </div>
+                </div>
+                <div class="user-border1">
+
+                </div>
+                <div class="creation-flex">
+                    <div class="created-on">
+                        <img src="./images/clock.png" height="18px" width="18px" alt="">
+                        <p>Created On : 27th July 2022</p>
+                    </div>
+
+                    <div class="created-by">
+                        <img src="./images/profile.png" height="18px" width="18px" alt="">
+                        <p>Created By : Sachin Borkar</p>
+                    </div>
+
+                    <div class="submitted-on">
+                        <img src="./images/clock.png" height="18px" width="18px" alt="">
+                        <p>Submitted On : 8th Aug 2022</p>
+                    </div>
+
+                    <div class="result-query">
+                        <img src="./images/result-symbol.png" height="18px" width="18px" alt="">
+                        <p>Result : Passed</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="complete-user2">
+            <div class="user2">
+                <div class="users-flex1">
+                    <div class="user-skill1">
+                        <p>User Experience Skill Assessment </p>
+
+                        <div class="user-topics1">
+                            <p><span><b>Topics :</b></span> Information Architecture, Information Design , Interaction
+                                Design , Mobile UX Design, Patterns & Antipatterns , Portfolio Design.</p>
+                        </div>
+                    </div>
+                    <div class="result">
+                        <button type="submit" class="result1">View Result</button>
+                    </div>
+                </div>
+                <div class="user-border1">
+
+                </div>
+                <div class="creation-flex">
+                    <div class="created-on">
+                        <img src="./images/clock.png" height="18px" width="18px" alt="">
+                        <p>Created On : 27th July 2022</p>
+                    </div>
+
+                    <div class="created-by">
+                        <img src="./images/profile.png" height="18px" width="18px" alt="">
+                        <p>Created By : Sachin Borkar</p>
+                    </div>
+
+                    <div class="submitted-on">
+                        <img src="./images/clock.png" height="18px" width="18px" alt="">
+                        <p>Submitted On : 8th Aug 2022</p>
+                    </div>
+
+                    <div class="result-query">
+                        <img src="./images/result-symbol.png" height="18px" width="18px" alt="">
+                        <p>Result : Passed</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="complete-user3">
+            <div class="user3">
+                <div class="users-flex1">
+                    <div class="user-skill1">
+                        <p>User Experience Skill Assessment </p>
+
+                        <div class="user-topics1">
+                            <p><span><b>Topics :</b></span> Information Architecture, Information Design , Interaction
+                                Design , Mobile UX Design, Patterns & Antipatterns , Portfolio Design.</p>
+                        </div>
+                    </div>
+                    <div class="result">
+                        <button type="submit" class="result1">View Result</button>
+                    </div>
+                </div>
+                <div class="user-border1">
+
+                </div>
+                <div class="creation-flex">
+                    <div class="created-on">
+                        <img src="./images/clock.png" height="18px" width="18px" alt="">
+                        <p>Created On : 27th July 2022</p>
+                    </div>
+
+                    <div class="created-by">
+                        <img src="./images/profile.png" height="18px" width="18px" alt="">
+                        <p>Created By : Sachin Borkar</p>
+                    </div>
+
+                    <div class="submitted-on">
+                        <img src="./images/clock.png" height="18px" width="18px" alt="">
+                        <p>Submitted On : 8th Aug 2022</p>
+                    </div>
+
+                    <div class="result-query">
+                        <img src="./images/result-symbol.png" height="18px" width="18px" alt="">
+                        <p>Result : Passed</p>
+                    </div>
+
+                </div>
+
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="total-flex-ongoing-course" id="total-flex-ongoing-course">
+        <div class="complete-user1">
+
+            <div class="user1">
+                <div class="users-flex1">
+                    <div class="user-skill1">
+                        <p>User Experience Skill Assessment </p>
+
+                        <div class="user-topics1">
+                            <p><span><b>Topics :</b></span> Information Architecture, Information Design , Interaction
+                                Design , Mobile UX Design, Patterns & Antipatterns , Portfolio Design.</p>
+                        </div>
+                    </div>
+                    <div class="result">
+                        <button type="submit" class="result1">View Result</button>
+                    </div>
+                </div>
+                <div class="user-border1">
+
+                </div>
+                <div class="creation-flex">
+                    <div class="created-on">
+                        <img src="./images/clock.png" height="18px" width="18px" alt="">
+                        <p>Created On : 27th July 2022</p>
+                    </div>
+
+                    <div class="created-by">
+                        <img src="./images/profile.png" height="18px" width="18px" alt="">
+                        <p>Created By : Sachin Borkar</p>
+                    </div>
+
+                    <div class="submitted-on">
+                        <img src="./images/clock.png" height="18px" width="18px" alt="">
+                        <p>Submitted On : 8th Aug 2022</p>
+                    </div>
+
+                    <div class="result-query">
+                        <img src="./images/result-symbol.png" height="18px" width="18px" alt="">
+                        <p>Result : Passed</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="complete-user2">
+            <div class="user2">
+                <div class="users-flex1">
+                    <div class="user-skill1">
+                        <p>User Experience Skill Assessment </p>
+
+                        <div class="user-topics1">
+                            <p><span><b>Topics :</b></span> Information Architecture, Information Design , Interaction
+                                Design , Mobile UX Design, Patterns & Antipatterns , Portfolio Design.</p>
+                        </div>
+                    </div>
+                    <div class="result">
+                        <button type="submit" class="result1">View Result</button>
+                    </div>
+                </div>
+                <div class="user-border1">
+
+                </div>
+                <div class="creation-flex">
+                    <div class="created-on">
+                        <img src="./images/clock.png" height="18px" width="18px" alt="">
+                        <p>Created On : 27th July 2022</p>
+                    </div>
+
+                    <div class="created-by">
+                        <img src="./images/profile.png" height="18px" width="18px" alt="">
+                        <p>Created By : Sachin Borkar</p>
+                    </div>
+
+                    <div class="submitted-on">
+                        <img src="./images/clock.png" height="18px" width="18px" alt="">
+                        <p>Submitted On : 8th Aug 2022</p>
+                    </div>
+
+                    <div class="result-query">
+                        <img src="./images/result-symbol.png" height="18px" width="18px" alt="">
+                        <p>Result : Passed</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="bulb">
+                <img src="./images/bulb.png" height="188.29px" width="188.29px" alt="">
+            </div>
+        </div>
+       
+        
+    </div>
+   
+    </div>
+    <div >
+    <div class="popup-page" id="popup-page">
+        <div class="container-fluid">
+            <!-- first half row -->
+    
+            <div class="row navs py-4" style="background-image: linear-gradient(#AFE0F4 , #AFE0F4);">
+                <h3 class="px-5 py-3">Assessment Result <span><i class="fa-solid fa-circle-xmark float-end pt-1 " onclick="closepopup()"></i></span>
+                </h3>
+                <hr class="hori">
+                <div class="col-6">
+                    <table>
+                        <tr>
+                            <td>
+                                <p class="px-5 pt-3"><i class="fa-solid fa-id-card text-center"></i><span
+                                        class="px-3">Employee Details<span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-5 py-3"> Deen Mohammed</td>
+                        </tr>
+                        <tr>
+                            <td class="px-5">Emp code</td>
+                            <td>2808</td>
+                        </tr>
+                        <tr>
+                            <td class="px-5">Email Address</td>
+                            <td>deen.mohammed@kanini.com</td>
+                        </tr>
+                        <tr>
+                            <td class="px-5">Department</td>
+                            <td>UXUI</td>
+                        </tr>
+                        <tr>
+                            <td class="px-5">Designation</td>
+                            <td>Associate</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-6">
+                    <table>
+                        <tr>
+                            <td>
+                                <p class="px-5 pt-3"><i class="fa-solid fa-id-card text-center"></i><span
+                                        class="px-3">Assessment Details<span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-5 py-3">ASS021_UXI_005</td>
+    
+                        </tr>
+    
+                        <tr>
+                            <td class="px-5">Level</td>
+                            <td>Basic</td>
+                        </tr>
+                        <tr class="PT-3">
+                            <td class="px-5">No. of Topics</td>
+                            <td>3</td>
+                        </tr>
+                        <tr class="PT-3">
+                            <td class="px-5">No. of Questions</td>
+                            <td>30</td>
+                        </tr>
+                        <tr class="PT-3">
+                            <td class="px-5">Creating on</td>
+                            <td>21-07-2022</td>
+                        </tr>
+                    </table>
+                </div>
+    
+    
+    
+            </div>
+    
+            <!-- second ha;lf-->
+            <div class="row px-5 pt-5 side2">
+    
+                <div class="col-6">
+                    <div class="card shadow py-4 " style="width: 468px; height: 334px;">
+                        <div class="row">
+                            <div class="col-8">
+                                <h5 class="card-title px-3">Result</h5>
+                                <h6 class="card-subtitle text-success"><img src="./images/tick.png" alt=""
+                                        class="px-3 py-3"> Assessment Passed</h6>
+                                <p class=" card-text px-5 ">Correct Answer<br>27/30</p>
+                                <p class="card-text px-5 ">Wrong Answer<br>1/30</p>
+                                <p class="card-text px-5 ">Skipped Answer<br>2/30</p>
+                            </div>
+                            <div class="col-4 pt-5">
+                                <img src="./images/res.png" class="float-end px-3" alt="">
+                            </div>
+                        </div>
+    
+    
+    
+    
+                    </div>
+    
+                </div>
+                <div class="col-6 px-5">
+                    <div class="card shadow py-4 " style="width: 468px;">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title px-3">Timer</h5>
+                                <h6 class="card-subtitle text-primary"><img src="./images/time.png" alt=""
+                                        class="px-3 py-3"> Total Time</h6>
+                                <p class=" card-text px-5 ">00:00:12 / 00:27:21</p>
+                                <div class="px-5 py-2">
+                                    <input type="range" name="" id="" style="width: 347px;">
+                                </div>
+    
+    
+                                <div class="row px-4 pt-3">
+                                    <div class="col">
+                                        <p>Start time</p>
+    
+                                    </div>
+                                    <div class="col">
+                                        <p>05:35 pm</p>
+                                    </div>
+                                    <div class="col">
+                                        <p>Question </p>
+    
+                                    </div>
+                                    <div class="col">
+                                        <p>01</p>
+                                    </div>
+                                </div>
+                                <div class="row px-4">
+                                    <div class="col">
+                                        <p>End time</p>
+    
+                                    </div>
+                                    <div class="col">
+                                        <p>06:02 pm</p>
+                                    </div>
+                                    <div class="col">
+                                        <p>Completionon </p>
+    
+                                    </div>
+                                    <div class="col">
+                                        <p>26-07-2022</p>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+    
+    
+    
+    
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+        </div>
+    </div>
+    
+
+</body>
+
+</html>

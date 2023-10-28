@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./jobseeker.css">
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+        <title>Jobseeker</title>
+    </head>
+    <body> <div class="containers">
+      <div class="sidebar hidden-2" id="nav-links">
+          <div class="logo">
+          <img src="./logo.png" alt="" class="logo" width="47px" height="47px" />
+          <h3>Kanini<br><span>Assessment</span></h3>
+          <div class="menu">
+              &emsp;&emsp;&emsp;&emsp;<button class="close btn-1 hidden" id="close" ><i class="fa fa-times" aria-hidden="true"></i></button>
+          </div>
+          </div>
+          <p><i class="fa-solid fa-table"></i>&emsp;Dashboard</p>
+          <p id="question"><i class="fa-solid fa-pager"></i>&emsp;Questions&emsp;&emsp;&emsp;&emsp;<i class="fa-solid fa-chevron-down" id="down"></i><i class="fa-solid fa-chevron-up hidden" id="up"></i></p>
+          <div class="ques hidden" id="ques">
+              <p>Add Questions</p>
+              <p>Question bank</p>
+          </div>           
+          <p><i class="fa-solid fa-suitcase"></i>&emsp;Jobseeker</p>
+          <p><i class="fa-solid fa-user"></i>&emsp;Employee&emsp;&emsp;&emsp;&emsp;<i class="fa-solid fa-chevron-down" id="emp-down"></i><i class="fa-solid fa-chevron-up hidden" id="emp-up"></i></p>
+          <div class="emp hidden" id="emp">
+              <p>Assessment Data</p>
+              <p>Manage Employee</p>
+          </div> 
+          <p><i class="fa-solid fa-gears"></i>&emsp;Settings</p>
+          <div class="hide-icon-1">
+              <i class="fa-solid fa-bell">&emsp;</i>&emsp;<span><b>HR Admin</b></span>
+          </div>
+      </div>
+      <div class="header1">
+          <div class="navbar">
+              <div class="menu">
+                  <button class="open btn-1" id="open" ><b>☰</b></button>   
+              </div> 
+              <div class="tit-1" >
+                  <h3>Jobseeker Assessment Data<br><span>View complete details of all assessment and its corresponding details of Jobseeker</span></h3>
+              </div>
+              <div class="inline">
+                  <form>
+                      <input type="search" placeholder="search here" name="search" class="search" />
+                  </form>
+              <div class="hide-icon" id="hr">
+                  <i class="fa-solid fa-bell"></i><span><b>HR Admin</b></span>
+              </div> 
+              </div>
+          </div>
+      </div>
+      <div style="margin-left: 350px; margin-top: 20px;" class="main">
+        <form class="containers">
+          <div class="options">
+            <p id="opt1">  <a href="#">Assessment list</a></p>
+            <p id="opt2"> <a href="#">Available Assessment</a></p>
+            
+           
+           <div class="icon">   <a href="#"  alt=" ">
+            <img src="./Icon button.png"></a></div>
+            <div class="btn btn-info opt3"><img src="./Icon.png">  Create Assessment </div>
+          </div>
+          <div class="line"></div><br>
+  <div class="table-responsive tab ">
+          <table class="table  ">
+            <thead class=" table-info ">
+              <tr >
+                <th>Assessment Id <img id="v1" src="./Vector.png"><img id="v2" src="./Vector (1).png"><img id="colborder" src="./Icon Separator.png"></th>
+                <th>Department<img id="v1" src="./Vector.png"><img id="v2" src="./Vector (1).png"><img id="colborder" src="./Icon Separator.png"></th>
+                <th>Level<img id="v1" src="./Vector.png"><img id="v2" src="./Vector (1).png"><img id="colborder" src="./Icon Separator.png"></th>
+                <th>No.of.Topic<img id="colborder" src="./Icon Separator.png"></th>
+                <th>Email Id<img id="colborder" src="./Icon Separator.png"></th>
+                <th>Status<img id="v1"  src="./Vector.png"><img id="v2" src="./Vector (1).png"><img id="colborder" src="./Icon Separator.png"></th>
+                <th>Completion Date<img id="v1" src="./Vector.png"><img id="v2" src="./Vector (1).png"><img id="colborder" src="./Icon Separator.png"></th>
+                <th>Result<img id="colborder" src="./Icon Separator.png"></th>
+                <th>Action<img id="colborder" src="./Icon Separator.png"></th>
+              </tr>
+            </thead>
+            <tbody >
+              <tr >
+                <td >AID21_UXUI_001</td>
+                <td>UXUI</td>
+                <td>Basic</td>
+                <td>3</td>
+                <td>Deenmohammed@gmail.com</td>
+                <td ><p class="btn" id="result">completed</p> </td>
+                <td>09-sep-2023</td>
+                <td><a href="#">View Result</a></td>
+                <td><img src="./option.png"></td>
+              </tr>
+              <tr>
+                <td>AID19_BE_002</td>
+                <td>Backend</td>
+                <td>Intermediate</td>
+                <td>6</td>
+                <td>prabakaran16@gmail.com</td>
+                <td ><p class="btn" id="result1">Not completed</p></td>
+                <td>-</td>
+                <td><a href="#">View Details</a></td>
+                <td><img src="./option.png"></td>
+              </tr>
+              <tr >
+                <td >AID12_Mktg_021</td>
+                <td>Marketing</td>
+                <td>Intermediate</td>
+                <td>2</td>
+                <td>Srivathsun12@gmail.com</td>
+                <td ><p class="btn" id="result">completed</p> </td>
+                <td>22-Aug-2022</td>
+                <td><a href="#">View Result</a></td>
+                <td><img src="./option.png"></td>
+              </tr>
+              <tr >
+                <td >AID23_GD_019</td>
+                <td>Graphic Design</td>
+                <td>Upskill</td>
+                <td>2</td>
+                <td>Rahulramsr@gmail.com</td>
+                <td ><p class="btn" id="result1">Not completed</p> </td>
+                <td>-</td>
+                <td><a href="#">View Details</a></td>
+                <td><img src="./option.png"></td>
+              </tr>
+              <tr >
+                <td >AID31_Dev_032</td>
+                <td>Development</td>
+                <td>Advance</td>
+                <td>3</td>
+                <td>Antony1997@gmail.com</td>
+                <td ><p class="btn" id="result1" >Not completed</p> </td>
+                <td>-</td>
+                <td><a href="#">View Details</a></td>
+                <td><img src="./option.png"></td>
+              </tr>
+              <tr >
+                <td >AID09_Mktg_020</td>
+                <td>Marketing</td>
+                <td>Basic</td>
+                <td>6</td>
+                <td>Shanmugavel@gmail.com</td>
+                <td ><p class="btn" id="result1">Not complete</p> </td>
+                <td>14-Aug-2022</td>
+                <td><a href="#">View Details</a></td>
+                <td><img src="./option.png"></td>
+              </tr>
+              <tr >
+                <td >AID20_UXI_010</td>
+                <td>UXUI</td>
+                <td>Upskill</td>
+                <td>8</td>
+                <td>Angurah2136@gmail.com</td>
+                <td ><p class="btn" id="result" >completed</p> </td>
+                <td>22-Aug-2022</td>
+                <td><a href="#">View Result</a></td>
+                <td><img src="./option.png"></td>
+              </tr>
+              <tr >
+                <td >AID18_FE_006</td>
+                <td>Frontend</td>
+                <td>Basic</td>
+                <td>2</td>
+                <td>Nithishkumar223@gmail.com</td>
+                <td ><p class="btn" id="result">completed</p> </td>
+                <td>11-Aug-2022</td>
+                <td><a href="#">View Result</a></td>
+                <td><img src="./option.png"></td>
+              </tr>
+              <tr >
+                <td >AID17_BE_001</td>
+                <td>Backend</td>
+                <td>Advance</td>
+                <td>3</td>
+                <td>Gokulnthish@gmail.com</td>
+                <td ><p class="btn" id="result">completed</p> </td>
+                <td>09-Aug-2022</td>
+                <td><a href="#">View Result</a></td>
+                <td><img src="./option.png"></td>
+              </tr>
+              <tr >
+                <td >AID17_FE_005</td>
+                <td>Frontend</td>
+                <td>Intermediate</td>
+                <td>6</td>
+                <td>Jamesjabaraj@gmail.com</td>
+                <td ><p class="btn" id="result">completed</p> </td>
+                <td>01-Aug-2022</td>
+                <td><a href="#">View Result</a></td>
+                <td><img src="./option.png"></td>
+              </tr>
+            </tbody>
+  
+          </table>
+        </div>
+        <div class="footer">
+          <div class="dd">
+            <p>Rows Per Page</p>
+            <div class="dropdown">
+              <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown">
+              10
+              </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item " href="#">11</a></li>
+              <li><a class="dropdown-item" href="#">12</a></li>
+              <li><a class="dropdown-item" href="#">13</a></li>
+            </ul>
+            </div>
+          </div>
+  <div class="pagi">
+        <ul class="pagination ">
+          <li class="page-item ">
+            <a class="page-link" href="#" >1</a>
+          </li>
+          <li class="page-item " aria-current="page">
+            <a class="page-link" href="#">2</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#"><img src="./pag.png"> </a></li>
+          <li class="page-item">
+            <a class="page-link" href="#">10</a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">11</a></li>
+          <li class="page-item"><a class="page-link" href="#">12</a></li>
+        </ul>
+       
+      </div>
+      <div class="d-inline">
+        
+      <p>Go to Page</p>
+      <div class="nxt_line"></div>
+      <!-- <div class="next"> -->
+      <img src="./navigator.png">
+    </div>
+    </div>
+         </form>
+      </div>
+      <script src="scripts.js"></script>
+    </body>
+</html>

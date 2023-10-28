@@ -1,0 +1,250 @@
+body{
+    margin: 0;
+    padding: 0;
+    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    font-family: manrope;
+    overflow-x: hidden;
+}
+.sidebar{
+    position: fixed;
+    background: linear-gradient(179.54deg, #AFE0F4 5.55%, #E1EEC8 194.36%);
+    width: fit-content;
+    height: 100%;
+    overflow-y: hidden;
+    padding: 40px 25px 0 45px;
+    width: 300px;
+    z-index: 2;
+}
+.logo{
+    display: flex;
+    padding: 0 8px;
+}
+.sidebar h3{
+    line-height: 14px;
+}
+.sidebar p{
+    font-size: 15px;
+    font-weight:500;
+    color: rgb(68, 68, 68);
+    line-height: 22px;
+    width: 220px;
+    padding: 20px 16px;
+}
+
+.sidebar span{
+    color: rgb(68, 68, 68);
+    font-size: 13px;
+}
+i{
+    color: rgb(68, 68, 68);
+}
+.ques{
+    margin-left: 35px;
+    border-left: 1px solid rgb(163, 163, 163);
+}
+.ques p{
+    width: 150px;
+    padding: 10px 15px;
+    margin-left: 5px;
+}
+.emp{
+    margin-left: 30px;
+    border-left: 1px solid rgb(163, 163, 163);
+}
+.emp p{
+    width: 155px;
+    padding: 10px 15px;
+    margin-left: 5px;
+}
+.sidebar p:hover{
+    background-color: #DFF3FB;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.res{
+    margin-left: 20px;
+}
+.hidden{
+    display: none;
+}
+.bg-img{
+    
+background: url(./Kanini\ Logo_H1\ 1\ \(1\).png);
+
+
+opacity: 0.6;
+}
+
+.navbar{
+    background-image: linear-gradient(to right,#F8FDFF, #F6FAEF);
+    display: flex;
+    justify-content: space-between;
+    margin-left: 300px;
+    padding: 25px 30px;
+    padding-bottom: 42px;
+}
+.navbar h3{
+    line-height: 14px;
+}
+.navbar span{
+    font-size: 13px;
+    color: rgb(68, 68, 68);
+}
+.inline{
+    display: flex;
+    margin-top: 20px;
+}
+.inline i{
+    margin: 0 20px;
+}
+.search{
+    width: 250px;
+    height: 28px;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid grey;
+}
+.menu{
+    display: none;
+}
+.btn-1{
+    background-color: transparent;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.hide-icon-1{
+    display: none;
+    margin-left: 20px;
+}
+@media screen and (max-width:1300px) {
+    .hide-icon{
+        display: none;
+     }
+     .hide-icon-1{
+        display: block;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .hide-icon{
+        display: none;
+     }
+     .hide-icon-1{
+        display: block;
+    }
+}
+@media screen and (max-width: 700px){
+    .hide-icon{
+       display: none;
+    }
+    .hidden-2{
+       display: none;
+    }   
+    .navbar{
+       margin-left: 0;
+    }
+    .navbar h3{
+       text-align: center;
+       width: 250px;
+    }
+    .menu{
+       display: block;
+    }
+    .search{
+       display: none;
+    }
+}
+@media screen and (max-width: 700px){
+    .hide-icon{
+       display: none;
+    }
+    .hidden-2{
+       display: none;
+    }   
+    .navbar{
+       margin-left: 0;
+    }
+    .navbar h3{
+       text-align: center;
+       width: 250px;
+    }
+    .menu{
+       display: block;
+    }
+    .search{
+       display: none;
+    }
+    .avl-top{
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+    .con-1{
+        margin-left: 30px;
+    }
+    .subhead{
+        margin-left: 0px;
+    }
+    .con-2{
+        margin-left: 30px;
+    }
+}
+ @media screen and (max-width: 420px) {
+       body{
+           font-size: 15px;
+       }
+       h3{
+           font-size: 16px;
+       }
+       .sidebar span{
+           font-size: 9px;
+       }
+       .sidebar h3{
+           line-height: 10px;
+       }
+       .navbar span{
+           font-size: 9px;
+       }
+       .navbar h3{
+           line-height: 10px;
+       }
+       .btn-1{
+           margin-top: 20px;
+       }
+       .logo img{
+           width: 35px;
+           height: 35px;
+           margin-top: 10px;
+       }
+      
+    }
+
+    .navbars{
+        width: auto;
+        margin-left: 330px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+
+       }
+       .srch{
+        width: 300px;
+       }
+       .srchs{
+        width: 250px;
+        margin-right: 100px;
+       }
+       main{
+        width: auto;
+        margin-left: 330px;
+        margin-top: 38px;
+       }
+       .ct{
+        font-size: 14px;
+       }
+       .img1{
+        margin: 0 auto;
+       }
+       .tl{
+        font-size:20px;
+       }
+    

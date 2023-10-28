@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="qnbank.css" />
+  </head>
+  <body>
+    <div class="main-con">
+      <div class="sidebar hidden-2" id="nav-links">
+        <div class="logo mb-5">
+          <img src="Images/image 1.png" alt="" class="logo" />
+          <h3>Kanini<br /><span>Assessment</span></h3>
+          <div class="menu">
+            &emsp;&emsp;&emsp;&emsp;<button
+              class="close btn-1 hidden"
+              id="close"
+            >
+              <i class="fa fa-times" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+        <p><img src="Images/Vector (4).png" />&emsp;Dashboard</p>
+        <p id="question">
+          <img
+            src="Images/Vector (5).png"
+          />&emsp;Questions&emsp;&emsp;&emsp;&emsp;<i
+            class="fa-solid fa-chevron-down"
+            id="down"
+          ></i
+          ><i class="fa-solid fa-chevron-up hidden" id="up"></i>
+        </p>
+        <div class="ques hidden" id="ques">
+          <p>Add Questions</p>
+          <p>Question bank</p>
+        </div>
+        <p><img src="Images/Vector (6).png" />&emsp;JobSeeker</p>
+        <p>
+          <img
+            src="Images/Vector (7).png"
+          />&emsp;Employee&emsp;&emsp;&emsp;&emsp;<i
+            class="fa-solid fa-chevron-down"
+            id="emp-down"
+          ></i
+          ><i class="fa-solid fa-chevron-up hidden" id="emp-up"></i>
+        </p>
+        <div class="emp hidden" id="emp">
+          <p>Assessment Data</p>
+          <p>Manage Employee</p>
+        </div>
+        <p><img src="Images/Vector (8).png" />&emsp;Settings</p>
+        <div class="hide-icon-1">
+          <i class="fa-solid fa-bell">&emsp;</i>&emsp;<span
+            ><b>HR Admin</b></span
+          >
+        </div>
+        <div class="bg-img"></div>
+      </div>
+      <div>
+        <div class="navbar">
+          <div class="menu">
+            <button class="open btn-1" id="open"><b>☰</b></button>
+          </div>
+          <div>
+            <h3>
+              Question Bank<br /><span
+                >Add question under the selected department and topics</span
+              >
+            </h3>
+          </div>
+          <div class="inline">
+            <div class="hide-icon" id="hr">
+              <i class="fa-solid fa-bell"></i><span><b>HR Admin</b></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-cont">
+        <div class="main-cont1">
+          <div class="con-1">
+            <div class="subcon1">
+              <div class="dept">
+                <select name="department" id="dropdown1">
+                  <option disabled selected hidden>Select Department</option>
+                  <!-- <option ><input type="text" placeholder="Type here..."><button>ADD</button> </option> -->
+                  <option>Applications Developer</option>
+                  <option>Data Architect</option>
+                  <option>Data Visualization Developer</option>
+                  <option>Data Science</option>
+                  <option>DevOps Engineer</option>
+                  <option>Dotnet Developer</option>
+                  <option>ETL Developer</option>
+                  <option>Frontend Developer</option>
+                  <option>Human Resources</option>
+                  <option>IT Technical Recruiter</option>
+                  <option>Project Manager</option>
+                  <option>QA Engineer</option>
+                  <option>Software Developer</option>
+                  <option>Application Architect .Net</option>
+                  <option>Application Architect Azure</option>
+                  <option>Sales Executive</option>
+                  <option>Software Test Engineer</option>
+                  <option>Tech Lead</option>
+                  <option>Technical Project Manager</option>
+                  <option>Technical Architect</option>
+                  <option>Trainee Engineer</option>
+                  <option>UX/UI</option>
+                </select>
+              </div>
+              <div class="lvl">
+                <select name="level" id="dropdown2">
+                  <option disabled selected hidden>Select Level</option>
+                  <option>Beginner</option>
+                  <option>Intermediate</option>
+                  <option>Advanced</option>
+                </select>
+              </div>
+            </div>
+            <div class="subcon2">
+              <div class="topic">
+                <button class="btn" id="mybtn">
+                  <span><img src="Images/plus.png" /></span>Add Topic
+                </button>
+              </div>
+              <div class="addqns">
+                <select name="addqn" id="addqn">
+                  <option disabled selected hidden>Add Questions</option>
+                  <option>
+                    <span><img src="Images/plus.png" /></span>Add Questions
+                  </option>
+                  <option style="background-image: url(Images/import.png)">
+                    Import Questions
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="con-2">
+            <div class="subhead"><h5>Available Topics</h5></div>
+            <div class="avl-top">
+              <div class="eachtopic">
+                <div class="java-img">
+                  <img src="Images/java.png" width="60px" height="60px" />
+                </div>
+                <div class="topic-con java">
+                  <div class="topic-name">Java</div>
+                  <div class="ttl-qn">250 Questions</div>
+                </div>
+                <div class="ok-btn"><img src="Images/green round.png" /></div>
+              </div>
+              <div class="eachtopic">
+                <div class="css-img">
+                  <img src="Images/css.png" width="35px" height="50px" />
+                </div>
+                <div class="topic-con css">
+                  <div class="topic-name">CSS</div>
+                  <div class="ttl-qn">250 Questions</div>
+                </div>
+                <div class="ok-btn"><img src="Images/green round.png" /></div>
+              </div>
+              <div class="eachtopic">
+                <div class="pyth-img">
+                  <img src="Images/python.png" width="69px" height="39px" />
+                </div>
+                <div class="topic-con python">
+                  <div class="topic-name">Python</div>
+                  <div class="ttl-qn">250 Questions</div>
+                </div>
+                <div class="ok-btn"><img src="Images/green round.png" /></div>
+              </div>
+              <div class="eachtopic">
+                <div class="jq-img">
+                  <img src="Images/JQuery.png" width="45px" height="45px" />
+                </div>
+                <div class="topic-con">
+                  <div class="topic-name">JQuery</div>
+                  <div class="ttl-qn">250 Questions</div>
+                </div>
+                <div class="ok-btn"><img src="Images/green round.png" /></div>
+              </div>
+              <div class="eachtopic">
+                <div class="react-img">
+                  <img src="Images/react.png" width="38px" height="33px" />
+                </div>
+                <div class="topic-con react">
+                  <div class="topic-name">React</div>
+                  <div class="ttl-qn">250 Questions</div>
+                </div>
+                <div class="ok-btn"><img src="Images/green round.png" /></div>
+              </div>
+              <div class="eachtopic">
+                <div class="figma-img">
+                  <img src="Images/figma.png" width="30px" height="45px" />
+                </div>
+                <div class="topic-con figma">
+                  <div class="topic-name">Figma</div>
+                  <div class="ttl-qn">250 Questions</div>
+                </div>
+                <div class="ok-btn"><img src="Images/green round.png" /></div>
+              </div>
+              <div class="eachtopic">
+                <div class="azure-img">
+                  <img src="Images/azure.png" width="41px" height="41px" />
+                </div>
+                <div class="topic-con azure">
+                  <div class="topic-name">Azure</div>
+                  <div class="ttl-qn">250 Questions</div>
+                </div>
+                <div class="ok-btn"><img src="Images/green round.png" /></div>
+              </div>
+              <div class="eachtopic">
+                <div class="html-img">
+                  <img src="Images/html.png" width="51px" height="51px" />
+                </div>
+                <div class="topic-con html">
+                  <div class="topic-name">HTML</div>
+                  <div class="ttl-qn">250 Questions</div>
+                </div>
+                <div class="ok-btn"><img src="Images/green round.png" /></div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="bulb">
+              <img class="bulb-img" src="Images/bulb.png" />
+            </div>
+          </div>
+          <div>
+            <div class="third-page" id="third">
+              <div class="successfully">
+                <div class="close-btn">
+                  <button class="closebtn">
+                    <img src="Images/close.png" alt="" />
+                  </button>
+                </div>
+                <div class="gif"><img src="Images/Rectangle.jpg" alt="" /></div>
+                <div class="added">Topic added Successfully</div>
+                <div class="added-sec">
+                  Topic has been added successfully, it will be reflected on
+                  page in few minutes
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="sec-page" id="sec">
+              <div class="sec-page-con">
+                <h1>Add Topics</h1>
+                <div class="horizontal-line"><hr /></div>
+                <select name="sec-department" id="sec-dropdown">
+                  <option disabled selected hidden>Select Department</option>
+
+                  <option>Applications Developer</option>
+                  <option>Data Architect</option>
+                  <option>Data Visualization Developer</option>
+                  <option>Data Science</option>
+                  <option>DevOps Engineer</option>
+                  <option>Dotnet Developer</option>
+                  <option>ETL Developer</option>
+                  <option>Frontend Developer</option>
+                  <option>Human Resources</option>
+                  <option>IT Technical Recruiter</option>
+                  <option>Project Manager</option>
+                  <option>QA Engineer</option>
+                  <option>Software Developer</option>
+                  <option>Application Architect .Net</option>
+                  <option>Application Architect Azure</option>
+                  <option>Sales Executive</option>
+                  <option>Software Test Engineer</option>
+                  <option>Tech Lead</option>
+                  <option>Technical Project Manager</option>
+                  <option>Technical Architect</option>
+                  <option>Trainee Engineer</option>
+                  <option>UX/UI</option>
+                </select>
+                <input
+                  type="text"
+                  id="topic"
+                  name="topic"
+                  placeholder="  Enter the topic name to be added...."
+                />
+                <div class="sub">Choose a picture from your computer</div>
+                <div class="pic-drop">
+                  <div class="pic-img">
+                    <img src="Images/book.png" alt="" />
+                  </div>
+                  <div class="csv-file">
+                    Drop a picture file here, or Browse to represent on the
+                    topics
+                  </div>
+                  <div class="csv-file2">Supports : .jpeg or .png</div>
+                </div>
+                <div class="btns">
+                  <div class="btn1"><button class="cancel">Cancel</button></div>
+                  <div class="btn2"><button id="submit">Submit</button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script>
+      //Add Topic
+      var modal = document.getElementById('sec')
+      var btn = document.getElementById('mybtn')
+      var cancel = document.getElementsByClassName('cancel')[0]
+      btn.onclick = function () {
+        modal.style.display = 'block'
+      }
+      cancel.onclick = function () {
+        modal.style.display = 'none'
+      }
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = 'none'
+        }
+      }
+      //Successfullyhc
+      var modal1 = document.getElementById('third')
+      var btn1 = document.getElementById('submit')
+      var close = document.getElementsByClassName('closebtn')[0]
+      btn1.onclick = function () {
+        modal1.style.display = 'block'
+      }
+      close.onclick = function () {
+        modal1.style.display = 'none'
+      }
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal1.style.display = 'none'
+        }
+      }
+    </script>
+  </body>
+</html>
