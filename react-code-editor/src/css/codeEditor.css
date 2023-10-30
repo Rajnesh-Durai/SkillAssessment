@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+}
+#kaniniLogo {
+  margin-left: -120px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+.code-main {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.code-cont1 {
+  margin-top: 20px;
+}
+.test-input {
+  margin-left: -120px;
+}
+.display-qn-left {
+  width: 750px;
+  height: 55vh;
+  margin-left: -120px;
+  margin-top: 10px;
+  border: 1px solid rgb(209, 209, 209);
+}
+.code-qn {
+  padding: 15px;
+  background-color: white;
+  font-size: 20px;
+  line-height: 30px;
+}
+.qn-headline {
+  padding-bottom: 40px;
+}
+.qn-testcase-heading {
+  font-size: 18px;
+  padding-bottom: 15px;
+}
+.code-qn-number {
+  font-size: 18px;
+  padding: 5px;
+  background-color: rgb(213, 215, 215);
+}
+.custom-input {
+  margin-left: -120px;
+  margin-top: 20px;
+}
+.testcase {
+  padding-bottom: 20px;
+}
+.test-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  width: 750px;
+}
+.test-lang {
+  display: flex;
+  margin-left: -330px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.language-button {
+  margin-right: 10px;
+}
+.test-code {
+  width: 100%;
+}
