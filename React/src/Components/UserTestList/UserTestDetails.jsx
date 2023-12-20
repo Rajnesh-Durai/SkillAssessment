@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import HourglassEmptyIcon from '@mui/icons-material/HourglassEmpty';
 import AlarmIcon from '@mui/icons-material/Alarm';
 import AddTaskIcon from '@mui/icons-material/AddTask';
+import { Link } from 'react-router-dom';
 
 const UserTestDetails = () => {
   const [getAllottedAssessment, setAllottedAssessment] = useState([{}]);
@@ -33,6 +34,11 @@ const UserTestDetails = () => {
     const formattedDate = new Date(dateString).toLocaleDateString(undefined, options);
   
     return formattedDate;
+  }
+
+  const startAssessment=(assessmentId,totalQuestions)=>{
+    sessionStorage.setItem("assessmentId", assessmentId);
+    sessionStorage.setItem("totalQuestions", totalQuestions);
   }
 
   return (
@@ -90,7 +96,7 @@ const UserTestDetails = () => {
                     </div>
                   </div>
                   <div className="allotted-line" />
-                  <div className="startassessment">Start Assessment</div>
+                  <Link to={`/assessmentportal/${item.assessmentId}/${item.numberOfQuestion}`} onClick={startAssessment(item.assessmentId,item.numberOfQuestion)}><div className="startassessment">Start Assessment</div></Link>
                 </div>
               ))
             )}
